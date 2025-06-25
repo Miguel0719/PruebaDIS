@@ -1,6 +1,6 @@
-package es.ufv.dis.back.final2025.msa.utils;
+package es.ufv.dis.back.final2025.msa.Utils;
 
-import es.ufv.dis.back.final2025.msa.model.Usuario;
+import es.ufv.dis.back.final2025.msa.Model.Usuario;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonIOException;
@@ -13,11 +13,15 @@ import java.lang.reflect.Type;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Collections;
+import org.springframework.stereotype.Component;
 
 /**
  * Clase para manejar la lectura/escritura de archivos JSON con usuarios.
  * Usa GSON para serialización/deserialización.
  */
+@Component
 public class LectorJSON {
 
     private static final Gson gson = new GsonBuilder()

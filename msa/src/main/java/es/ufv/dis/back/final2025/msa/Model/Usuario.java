@@ -1,4 +1,5 @@
-package es.ufv.dis.back.final2025.msa.model;
+// Usuario.java
+package es.ufv.dis.back.final2025.msa.Model;
 
 public class Usuario {
     private String id;
@@ -7,12 +8,11 @@ public class Usuario {
     private String nif;
     private Direccion direccion;
     private String email;
-    private MetodoPago metodoPago; // Cambiado de List<MetodoPago> a objeto único
+    private MetodoPago metodoPago;
 
-    // Constructor, getters y setters
     public Usuario() {}
 
-    // Getters y Setters (requeridos para GSON)
+    // Getters y Setters
     public String getId() { return id; }
     public void setId(String id) { this.id = id; }
     public String getNombre() { return nombre; }
@@ -27,21 +27,4 @@ public class Usuario {
     public void setEmail(String email) { this.email = email; }
     public MetodoPago getMetodoPago() { return metodoPago; }
     public void setMetodoPago(MetodoPago metodoPago) { this.metodoPago = metodoPago; }
-}
-
-class Direccion {
-    private String calle;
-    private int numero; // Cambiado a int para coincidir con el JSON
-    private String codigoPostal;
-    private String pisoLetra;
-    private String ciudad;
-
-    // Getters y Setters
-}
-
-class MetodoPago {
-    private long numeroTarjeta; // Cambiado a long por el número grande
-    private String nombreAsociado;
-
-    // Getters y Setters
 }

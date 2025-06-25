@@ -1,8 +1,8 @@
-package es.ufv.dis.back.final2025.msa.controller;
+package es.ufv.dis.back.final2025.msa.Controller;
 
-import es.ufv.dis.back.final2025.msa.model.Usuario;
-import es.ufv.dis.back.final2025.msa.service.PdfService;
-import es.ufv.dis.back.final2025.msa.service.UserService;
+import es.ufv.dis.back.final2025.msa.Model.Usuario;
+import es.ufv.dis.back.final2025.msa.Service.PdfService;
+import es.ufv.dis.back.final2025.msa.Service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -46,7 +46,7 @@ public class UserController {
 
     @GetMapping("/generar-pdf")
     public String generatePdf() {
-        pdfService.generatePdf(userService.getAllUsers(), "info.pdf");
+        pdfService.generateUsersPdf(userService.getAllUsers(), "info.pdf"); // Nombre fijo exigido
         return "PDF generado correctamente";
     }
 }

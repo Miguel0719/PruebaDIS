@@ -1,7 +1,7 @@
-package es.ufv.dis.back.final2025.msa.service;
+package es.ufv.dis.back.final2025.msa.Service;
 
-import es.ufv.dis.back.final2025.msa.model.Usuario;
-import es.ufv.dis.back.final2025.msa.utils.LectorJSON;
+import es.ufv.dis.back.final2025.msa.Model.Usuario;
+import es.ufv.dis.back.final2025.msa.Utils.LectorJSON;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.Optional;
 
 @Service
 public class UserService {
-    private static final String JSON_PATH = "data/usuarios.json";
+    private static final String JSON_PATH = "src/main/resources/usuarios.json";
     private final LectorJSON lectorJSON;
 
     public UserService(LectorJSON lectorJSON) {
