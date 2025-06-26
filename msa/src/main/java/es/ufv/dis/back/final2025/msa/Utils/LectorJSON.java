@@ -27,7 +27,7 @@ public class LectorJSON {
     private static final Gson gson = new GsonBuilder()
             .setPrettyPrinting()
             .create();
-    private static final String JSON_PATH = "src/main/resources/usuarios.json";
+    private static final String JSON_PATH = "msa/src/main/resources/usuarios.json";
 
     /**
      * Lee un archivo JSON y devuelve una lista de usuarios.

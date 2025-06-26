@@ -9,7 +9,7 @@ import java.util.Optional;
 
 @Service
 public class UserService {
-    private static final String JSON_PATH = "src/main/resources/usuarios.json";
+    private static final String JSON_PATH = "msa/src/main/resources/usuarios.json";
     private final LectorJSON lectorJSON;
 
     public UserService(LectorJSON lectorJSON) {
